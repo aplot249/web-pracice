@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包3</title>
+</head>
+<body>
+
+</body>
+<script>
+    let name = "outer"
+    let f1 = function () {
+        let name = "inner"
+        function f2() {
+            console.log(name)
+        }
+        return f2
+    }
+    f1()()
+</script>
+</html>

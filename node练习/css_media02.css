@@ -1,0 +1,65 @@
+@media screen and (max-width: 540px) {
+    /*body{*/
+    /*    background: yellow;*/
+    /*}*/
+}
+
+@media screen and (min-width: 540px) {
+    /*body{*/
+    /*    background: green;*/
+    /*}*/
+}
+
+@media screen and (min-width: 760px) {
+    /*body{*/
+    /*    background: blue;*/
+    /*}*/
+}
+
+@media screen and (min-width: 1080px) {
+    /*body{*/
+    /*    background: red;*/
+    /*}*/
+    .top {
+        display: flex;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 20px;
+        background-color: rgb(255, 127, 80);
+    }
+
+    .logo {
+        margin-right: 20px;
+    }
+
+    ul {
+        margin: 0;
+        flex: 1;
+    }
+
+    ul > li {
+        list-style: none;
+        display: inline-block;
+        width: 100px;
+    }
+
+    button {
+        background-color: rgb(206, 214, 224);
+        border: none;
+        width: 60px;
+        height: 30px;
+        margin: 0 5px;
+    }
+
+    .bottom {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        height: 50px;
+        line-height: 50px;
+        border: 1px solid red;
+        text-align: center;
+        background-color: #70f3ff;
+    }
+
+}

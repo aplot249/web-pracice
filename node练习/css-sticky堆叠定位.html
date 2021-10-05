@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>堆叠定位</title>
+    <style>
+        div {
+            position: sticky;
+            top: 0;
+        }
+        
+        div:nth-last-of-type(1) {
+            height: 3003px;
+        }
+        
+        img {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div><img src="https://doc.houdunren.com/assets/img/xj-small.f331d790.png"></div>
+    <div><img src="https://doc.houdunren.com/assets/img/image-20201105151841146.dedaa633.png"></div>
+    <div><img src="https://doc.houdunren.com/assets/img/image-20201105155440610.480b88a5.png"></div>
+    <div class="last"></div>
+</body>
+
+</html>

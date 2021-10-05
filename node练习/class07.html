@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>这是按钮</button>
+</body>
+<script>
+    class Myclass{
+        constructor(name) {
+            this.name = name
+            this.btn = document.querySelector('button')
+            this.btn.onclick = this.myclick
+        }
+        say(){
+            console.log(this)
+        }
+        // myclick = ()=>{
+        myclick (){
+            console.log(this)
+            // console.log(`点击了我，我的this指向：${this}`)
+        }
+    }
+    let mc = new Myclass('lisiurui')
+    mc.say()
+</script>
+</html>

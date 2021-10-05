@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css栅格系统</title>
+    <style>
+        .container {
+            height: 400px;
+            width: 600px;
+            display: grid;
+            grid-template-rows: 50% 50%;
+            grid-template-columns: 30% 30% 30%;
+        }
+        
+        .container>.item {
+            border: 1px solid red;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .item span {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            line-height: 200px;
+            text-align: center;
+            color: royalblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <span>1</span>
+        </div>
+        <div class="item">
+            <span>2</span>
+        </div>
+        <div class="item">
+            <span>3</span>
+        </div>
+        <div class="item">
+            <span>4</span>
+        </div>
+        <div class="item">
+            <span>5</span>
+        </div>
+        <div class="item">
+            <span>6</span>
+        </div>
+    </div>
+</body>
+
+</html>

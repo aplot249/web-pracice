@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡实现</title>
+    <style>
+        ul {
+            display: flex;
+            /*flex-direction: row;*/
+            /*flex-wrap: nowrap;*/
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+
+        ul > li {
+            display: inline-block;
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: blue;
+        }
+
+        /*#bottom>div{*/
+        /*    display: none;*/
+        /*}*/
+
+        .active{
+            display: block;
+        }
+
+        #bottom {
+            border: 1px solid red;
+            height: 100px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="tab">
+    <div id="top">
+        <ul>
+            <li>选项1</li>
+            <li>选项2</li>
+            <li>选项3</li>
+        </ul>
+    </div>
+    <div id="bottom">
+        <div class="active">
+            显示内容1
+        </div>
+        <div>
+            显示内容2
+        </div>
+        <div>
+            显示内容3
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script>
+    class Tabs {
+        constructor() {
+            this.tabs = document.querySelectorAll('li')
+            this.contents = document.querySelectorAll('#bottom>div')
+            this.init()
+        }
+        init() {
+            let that = this
+            for (let i = 0; i < this.tabs.length; i++) {
+                this.tabs[i].index = i
+                // 这里故意不用箭头函数，里面的this指向的是鼠标移动到的li元素
+                this.tabs[i].onclick = function () {
+                    console.log(`鼠标点击了我 ${this.index}`)
+                    that.clearContentClass()
+                    //操作content样式
+                    // console.log(that.contents[this.index])
+                    that.contents[this.index].className = 'active'
+                }
+            }
+        }
+        clearContentClass() {
+            for (let i = 0; i < this.contents.length; i++) {
+                this.contents[i].className = ''
+            }
+        }
+    }
+
+    new Tabs()
+
+</script>
+</html>

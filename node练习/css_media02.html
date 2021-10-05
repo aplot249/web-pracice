@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>媒体查询</title>
+    <link rel="stylesheet" href="./css_media02.css">
+</head>
+<body>
+<div class="top">
+    <div class="logo">这是logo位置</div>
+    <ul>
+        <li>选项1</li>
+        <li>选项2</li>
+        <li>选项3</li>
+        <li>选项4</li>
+    </ul>
+    <div class="action">
+        <button>注册</button>
+        <button>登录</button>
+    </div>
+</div>
+<div class="middle">这是中间</div>
+<div class="bottom">
+    穿云101 @版权所有 2017-2021
+</div>
+</body>
+<script>
+    class NavTabs{
+        constructor() {
+            this.tabs = document.querySelectorAll('ul>li')
+            this.init()
+        }
+        init(){
+            console.log(this.tabs)
+            for(let i=0;i<this.tabs.length;i++){
+                this.tabs[i].onclick = function () {
+                    console.log(`${this.innerText} 被点击了`)
+                }
+            }
+        }
+    }
+    let navbar = new NavTabs()
+
+</script>
+</html>

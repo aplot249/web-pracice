@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+        }
+        /* div:nth-last-of-type(1) {
+            color: red;
+        } */
+        /* 才与上面等价 */
+        
+        div:nth-last-child(2) {
+            color: red;
+            clear: both;
+        }
+        
+        div:nth-of-type(1) {
+            float: left;
+        }
+        
+        div:nth-of-type(2) {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blue">blue</div>
+    <div class="red">red</div>
+    <div class="yellow">yellow</div>
+    <p>dddddddddddddddddd</p>
+</body>
+
+</html>

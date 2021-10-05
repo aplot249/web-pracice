@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包2</title>
+</head>
+<body>
+
+</body>
+<script>
+    let name = "outer"
+    let obj = {
+        name:"inner",
+        getName:function () {
+            console.log(this.name)
+            // 一个函数嵌套在另一个函数连，且外层函数里面要有局部变量，这个外部函数才被称为闭包
+            let name = this.name
+            let nn = function () {
+                console.log(name)
+            }
+            return nn
+        }
+    }
+    // 调用对象的某个方法，给方法内this是指向该对象的
+    obj.getName()()
+</script>
+</html>

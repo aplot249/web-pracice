@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 属性选择器 */
+        /* [name=mydate] 属性值加不加'都是可以的 */
+        /* [name='mydate'] {
+            height: 50px;
+            width: 100%;
+        } */
+        /* 并列选择器 */
+        /* span,
+        p {
+            color: red;
+        } */
+        /* div下面的所有span */
+        /* div span {
+            color: red;
+        } */
+        /* div后面的第一层span */
+        /* div>span { */
+        /* color: red; */
+        /* } */
+        /* input~h2 {
+            color: red;
+        } */
+        
+        input+h2 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" name="mydate" id="">
+    <h2>是h2</h2>
+    <h2>又是h2</h2>
+    <div>
+        <span>span内容</span>
+        <p>
+            <span>p中span元素1</span>
+            <span>p中span元素2</span>
+        </p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>箭头函数</title>
+</head>
+<body>
+
+</body>
+<script>
+    var name = "刘嗣瑞"
+    let obj = {
+        name:"瑞斯刘",
+        // 对象没有作用域
+        sayName:()=>{
+            console.log(this)
+            console.log(this.name)
+        }
+    }
+    obj.sayName()
+</script>
+</html>

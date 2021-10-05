@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // function Myclass(name, age) {
+    //     this.name = name
+    //     this.age = age
+    //     this.speak = function() {
+    //         console.log("wosuo")
+    //     }
+    // }
+    // Myclass.prototype.say = function() {
+    //     console.log(`我叫 ${this.name}，我年龄是${this.age}`)
+    // }
+    // let myclass = new Myclass("lisirui", 26)
+    // myclass.say()
+    // myclass.speak()
+
+    // let arr = ["a", "v", "c", "d"]
+    // console.log(Object.keys(arr))
+
+    // Object.getPrototypeOf //获取原型对象的标准方法
+
+    function Func() {
+        this.name = '没名字'
+    }
+    Func.prototype.say = function() {
+        console.log("sdjhkjdhskjhdsjkhk")
+    }
+    let func = new Func()
+    cc = Object.create(func)
+    console.log(cc)
+</script>
+
+</html>

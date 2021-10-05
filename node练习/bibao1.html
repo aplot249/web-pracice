@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function a() {
+        //     console.log(this); //输出函数a中的this对象
+        // }
+
+        // function b() {} //定义函数b
+        // var obj = {
+        //     name: 'onepixel'
+        // }; //定义对象obj
+        // a.call(); //window
+        // a.call(null); //window
+        // a.call(undefined); //window
+        // a.call(1); //Number
+        // a.call(''); //String
+        // a.call(true); //Boolean
+        // a.call(b); // function b(){}
+        // a.call(obj); //Object
+
+
+
+
+        // var a = {
+        //     name: 'onepixel', //定义a的属性 
+        //     say: function() { //定义a的方法 
+        //         console.log("Hi,I'm function a! " + this.name);
+        //     }
+        // };
+
+        // function b(name) {
+        //     console.log("Post params: " + name);
+        //     console.log("I'm " + this.name);
+        //     this.say();
+        // }
+        // b.call(a, 'test'); //call方法的作用是将b函数中的this指向改为指向函数a，参数是给b的 
+        // // 此时的test就是调用b函数所传入的参数
+
+
+
+
+        var animals = [{
+            species: 'Lion',
+            name: 'King'
+        }, {
+            species: 'Whale',
+            name: 'Fail'
+        }];
+
+        for (var i = 0; i < animals.length; i++) {
+            (function(i) {
+                this.print = function() {
+                    console.log('#' + i + ' ' + this.species + ': ' + this.name);
+                }
+                this.print();
+            }).call(animals[i], i);
+        }
+    </script>
+</body>
+
+</html>

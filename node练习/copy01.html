@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拷贝</title>
+</head>
+<body>
+
+</body>
+<script>
+    obj = {
+        name: "刘嗣瑞",
+        age:23
+    }
+    let oo = {}
+    // for(let k in obj){
+    //     oo[k] = obj[k]
+    // }
+    Object.assign(oo,obj)
+    console.log(oo)
+    obj.name = "王继明"
+    console.log(obj,oo)
+
+</script>
+</html>

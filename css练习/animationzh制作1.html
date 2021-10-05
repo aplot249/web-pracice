@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document animation动画制作</title>
+    <style>
+        .container {
+            margin: auto;
+            width: 300px;
+            height: 400px;
+            border: 1px solid;
+            overflow: hidden;
+        }
+        
+        p {
+            margin-top: 0;
+            line-height: 50px;
+            white-space: nowrap;
+            color: royalblue;
+            position: relative;
+            animation: 5s gundong infinite;
+            animation-direction: normal;
+        }
+        
+        @keyframes gundong {
+            0% {
+                left: 100%;
+            }
+            50% {
+                left: 0%;
+            }
+            100% {
+                left: -100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <div class="inner"> -->
+        <p>这是滚动内容1，这是滚动内容2，这是滚动内容3，这是滚动内容4，这是滚动内容5，这是滚动内容6</p>
+        <!-- </div> -->
+    </div>
+</body>
+
+</html>
